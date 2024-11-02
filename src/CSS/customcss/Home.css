@@ -1,0 +1,44 @@
+/* custom.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-bounce {
+  animation: text-bounce 1s infinite;
+}
+
+@keyframes text-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.menu-slide-in {
+  animation: slideIn 0.3s forwards;
+}
+
+.menu-slide-out {
+  animation: slideOut 0.3s forwards;
+}
