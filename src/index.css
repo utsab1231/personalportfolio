@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .text-outline {
+        -webkit-text-stroke: 1px #ffffff;
+    }
+    
+    .group:hover .text-outline {
+        -webkit-text-stroke: 1px #00ff99;
+    }
+}

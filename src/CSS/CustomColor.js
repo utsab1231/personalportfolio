@@ -4,4 +4,5 @@ module.exports = {
   secondary: "#17F7A4",
   secondarylight: "#12c583",
   neutral: "#FDFCFF",
+  neutrallight: "#FDFCFF19",
 };

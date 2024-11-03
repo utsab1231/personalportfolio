@@ -13,6 +13,7 @@ const CurtainTransition = ({ onComplete }: { onComplete: () => void }) => (
       width: "100vw",
       height: "100vh",
       backgroundColor: "#333",
+      zIndex: 1000000000000000,
     }}
     onAnimationComplete={onComplete}
   />
