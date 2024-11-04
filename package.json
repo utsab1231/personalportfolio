@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-email/components": "^0.0.26",
     "emailjs-com": "^3.2.0",
+    "firebase": "^11.0.1",
     "flowbite-react": "^0.10.2",
     "framer-motion": "^11.11.11",
     "mailersend": "^2.3.0",
