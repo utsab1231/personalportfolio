@@ -11,4 +11,36 @@
     .group:hover .text-outline {
         -webkit-text-stroke: 1px #00ff99;
     }
+    /* Custom Scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar (for horizontal scrollbar) */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #2A292F; /* Track color (using primarylight) */
+    border-radius: 10px; /* Rounded corners for the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #17F7A4; /* Thumb color (using secondary) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  /* Optional: Hover effect for the thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #12c583; /* Thumb color on hover (using secondarylight) */
+  }
+  
+  /* Hide the scrollbar arrows (no arrow buttons) */
+  ::-webkit-scrollbar-button {
+    display: none; /* Hide the arrows */
+  }
+  
+  /* Custom Scrollbar for Firefox */
+  .scrollbar {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #17F7A4 #2A292F; /* Thumb color and track color */
+  }
+  
 }
