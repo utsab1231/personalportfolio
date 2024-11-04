@@ -87,13 +87,9 @@ function Navbar() {
                 Contact
               </NavLink>
             </li>
-            <li className="mr-4">
-              <NavLink
-                className={({ isActive }) => (isActive ? "" : "")}
-                to="/hire-me"
-              >
-                Hire Me
-              </NavLink>
+            <li className="mr-4 flex justify-center items-center rounded-lg overflow-hidden bg-gradient-to-r from-secondary to-neutral gap-1">
+              <span className="pl-2 py-2 text-black">For</span>
+              <span className="pr-2 py-2 text-black">Hire</span>
             </li>
           </ul>
         </div>
@@ -172,15 +168,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/hire-me"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                isActive ? "text-secondarylight border-b border-dashed" : ""
-              }
-            >
-              Hire Me
-            </NavLink>
+            <span>Hire Me</span>
           </li>
         </ul>
       </div>
@@ -192,7 +180,7 @@ function Navbar() {
             <CurtainTransition onComplete={handleCompleteTransition} />
           )}
           !isTransitioning &&{" "}
-          <motion.div key={location.pathname} >
+          <motion.div key={location.pathname}>
             <Outlet />
           </motion.div>
         </AnimatePresence>

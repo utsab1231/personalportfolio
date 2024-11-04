@@ -27,9 +27,9 @@ function RouterProviderComponent() {
           element: <>{<RouterList.Work />}</>,
         },
         {
-          path: "/hire-me",
-          element: <>{<RouterList.HireMe />}</>,
-        },
+          path:"*",
+          element:<>{<RouterList.NotFound />}</>
+        }
       ],
     },
   ]);
