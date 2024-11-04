@@ -1,0 +1,22 @@
+{
+  "short_name": "portfolio",
+  "name": "My personal portfolio",
+  "description": "It is a personal portfolio website",
+  "icons": [
+    {
+      "src": "/icons/icon-120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/icons/icon-310.png",
+      "type": "image/png",
+      "sizes": "310x310"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en"
+}
