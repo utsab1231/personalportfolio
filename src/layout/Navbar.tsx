@@ -192,7 +192,7 @@ function Navbar() {
             <CurtainTransition onComplete={handleCompleteTransition} />
           )}
           !isTransitioning &&{" "}
-          <motion.div key={location.pathname}>
+          <motion.div key={location.pathname} >
             <Outlet />
           </motion.div>
         </AnimatePresence>

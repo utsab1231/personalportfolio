@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 function NameTitle() {
   // Define a list of colors
   const colors = [
@@ -23,10 +24,12 @@ function NameTitle() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex items-baseline gap-1">
-      <div className="text-neutral font-bold text-3xl">Utsab</div>
-      <div className={`h-3 w-3 ${color} rounded-full animate-pulse`}></div>
-    </div>
+    <Link to="/">
+      <div className="flex items-baseline gap-1">
+        <div className="text-neutral font-bold text-3xl">Utsab</div>
+        <div className={`h-3 w-3 ${color} rounded-full animate-pulse`}></div>
+      </div>
+    </Link>
   );
 }
 export default NameTitle;

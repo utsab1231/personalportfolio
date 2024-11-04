@@ -2,7 +2,7 @@ import RouterProviderComponent from "./router/Router";
 
 function App() {
   return (
-    <div className="bg-primary h-fit md:h-screen md:overflow-hidden font-primary">
+    <div className="bg-primary  min-h-screen h-auto md:h-screen md:overflow-hidden font-primary py-4">
       <RouterProviderComponent />
     </div>
   );
