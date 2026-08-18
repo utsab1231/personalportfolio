@@ -34,6 +34,7 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@9ad0d519471afe1de970603de47075637414bfe9 # v15.27.0
         with:
-          args: deploy --only hosting --project ${{ secrets.FIREBASE_PROJECT_ID }}
+          args: deploy --only hosting
+          PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
         env:
           GCP_SA_KEY: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
