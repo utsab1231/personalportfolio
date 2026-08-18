@@ -185,16 +185,18 @@ export const worm = {
 export const tryouts = {
   title: "Tryouts",
   titleDeva: "प्रयास",
+  // Base names — the optimize-media script generates /public/tryouts/<base>-<width>.<ext>
+  // variants from these. Keep in sync with scripts/optimize-media.mjs → SOURCES.
   images: [
-    "https://files.catbox.moe/qfneeb.jpg",
-    "https://files.catbox.moe/esfcru.jpg",
-    "https://files.catbox.moe/qd6vlr.jpg",
-    "https://files.catbox.moe/1eu443.jpg",
-    "https://files.catbox.moe/kopfq6.jpg",
-    "https://files.catbox.moe/dyn7r6.jpg",
-    "https://files.catbox.moe/ffs62n.jpg",
-    "https://files.catbox.moe/q3ecss.jpg",
-    "https://files.catbox.moe/y4lijv.jpg",
+    "qfneeb",
+    "esfcru",
+    "qd6vlr",
+    "1eu443",
+    "kopfq6",
+    "dyn7r6",
+    "ffs62n",
+    "q3ecss",
+    "y4lijv",
   ],
   videos: [] as string[],
 };
