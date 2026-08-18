@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Personal Portfolio
 
-First, run the development server:
+My personal portfolio website, built to showcase my work, experience, interests, and projects.
+
+## Tech Stack
+
+* **Next.js**
+* **TypeScript**
+* **Tailwind CSS**
+* **Firebase Hosting**
+
+## Features
+
+* Responsive and minimal design
+* Personal introduction and career interests
+* Project showcase
+* Experience and skills
+* Contact information
+* Static site generation for fast performance
+
+## Development
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone <repository-url>
+cd <project-directory>
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build
 
-## Learn More
+Create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The static files are generated in the `out` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The portfolio is deployed using **Firebase Hosting**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Production deployments are handled through GitHub Actions whenever changes are pushed to the `master` branch.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The deployment process:
+
+```text
+Push to master
+      ↓
+Install dependencies
+      ↓
+npm run build
+      ↓
+Generate static files
+      ↓
+Deploy to Firebase Hosting
+```
+
+## Project Structure
+
+```text
+.
+├── public/          # Static assets
+├── src/             # Application source code
+├── out/             # Generated static output
+├── firebase.json    # Firebase Hosting configuration
+├── next.config.*    # Next.js configuration
+├── package.json
+└── README.md
+```
+
+## License
+
+This project is a personal portfolio and is not intended to be redistributed or reused as a template without permission.
