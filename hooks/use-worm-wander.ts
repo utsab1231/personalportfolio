@@ -14,7 +14,11 @@ type WormWanderApi = {
   registerSegment: (index: number) => (el: HTMLDivElement | null) => void;
 };
 
-const EDGE_PADDING = 24;
+// Keep in sync with the SCALE constant in components/worm.tsx — both scale the
+// same creature, just its motion here vs. its body-plan geometry there.
+const SCALE = 1.7;
+
+const EDGE_PADDING = 32; // px clearance from viewport edges (bumped up for the bigger body)
 const NAV_TOP_BAND = 96;
 const NAV_LEFT_BAND_MD = 96;
 const MD_BREAKPOINT = 768;
@@ -23,8 +27,8 @@ const MAX_SPEED = 90;
 const MIN_PAUSE_MS = 300;
 const MAX_PAUSE_MS = 900;
 const ROTATE_DURATION = 0.35; // sec — how long a heading change takes to ease in
-const SEGMENT_SPACING = 6; // px between segments along the spine
-const WAVE_AMPLITUDE = 3; // px of perpendicular sway at the tail
+const SEGMENT_SPACING = 6 * SCALE; // px between segments along the spine
+const WAVE_AMPLITUDE = 3 * SCALE; // px of perpendicular sway at the tail
 const WAVE_FREQUENCY = 0.5; // wave cycles per segment index
 const WAVE_SPEED = 0.12; // rad of phase advanced per px travelled (ties sway to movement)
 

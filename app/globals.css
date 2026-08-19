@@ -57,6 +57,25 @@ body {
   }
 }
 
+/* Idle wiggle for the worm's legs/antennae — each appendage sets its own base
+   angle via --rot and stagger via --wiggle-delay (see components/worm.tsx).
+   Neutralized by the prefers-reduced-motion block below, same as everything else. */
+@keyframes wormWiggle {
+  0%,
+  100% {
+    transform: rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: rotate(calc(var(--rot, 0deg) + 6deg));
+  }
+}
+
+.worm-appendage {
+  transform: rotate(var(--rot, 0deg));
+  animation: wormWiggle 1.4s ease-in-out infinite;
+  animation-delay: var(--wiggle-delay, 0s);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
