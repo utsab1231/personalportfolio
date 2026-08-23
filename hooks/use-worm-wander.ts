@@ -81,6 +81,9 @@ export function useWormWander({
     ).matches;
     if (reduceMotion) return;
 
+    const isMobile = window.innerWidth < MD_BREAKPOINT;
+    if (isMobile) return;
+
     let cancelled = false;
 
     const pos = { x: window.innerWidth * 0.5, y: window.innerHeight * 0.5 };

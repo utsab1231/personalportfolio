@@ -31,7 +31,7 @@ export function Worm() {
   return (
     <div
       ref={containerRef}
-      className="group fixed top-0 left-0 z-30 h-2 w-2 cursor-default select-none pointer-events-auto"
+      className="group fixed top-0 left-0 z-30 hidden h-2 w-2 cursor-default select-none pointer-events-auto md:block"
       style={{ transform: "translate3d(50vw, 50vh, 0)" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
