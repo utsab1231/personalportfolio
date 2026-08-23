@@ -8,12 +8,55 @@
   color-scheme: light;
 }
 
-:root.dark {
+:root[data-theme="dark"] {
   --bg: #09090b;
   --fg: #fafafa;
   --muted: #a1a1aa;
   --border: #27272a;
   color-scheme: dark;
+}
+
+/* Funky named themes — each sets only --bg/--fg; --muted and --border are
+   derived automatically via color-mix so we don't hand-pick 12 more values. */
+:root[data-theme="lime-volt"],
+:root[data-theme="fire-alarm"],
+:root[data-theme="velvet-dusk"],
+:root[data-theme="jungle-leaf"],
+:root[data-theme="gold-rush"],
+:root[data-theme="ember-coral"] {
+  --muted: color-mix(in oklch, var(--fg) 55%, var(--bg) 45%);
+  --border: color-mix(in oklch, var(--fg) 20%, var(--bg) 80%);
+  color-scheme: dark;
+}
+
+:root[data-theme="lime-volt"] {
+  --bg: #0245ec; /* Royal Blue */
+  --fg: #d9ff3a; /* Neon Lime */
+}
+
+:root[data-theme="fire-alarm"] {
+  --bg: #e62727; /* Fire Red */
+  --fg: #ffde00; /* Electric Yellow */
+}
+
+:root[data-theme="velvet-dusk"] {
+  --bg: #3b163a; /* Midnight Plum */
+  --fg: #f0c986; /* Honey Dawn */
+}
+
+:root[data-theme="jungle-leaf"] {
+  --bg: #203d43; /* Emerald Green */
+  --fg: #cdff9b; /* Bright Leaf */
+}
+
+:root[data-theme="gold-rush"] {
+  --bg: #04123f; /* Deep Navy */
+  --fg: #fec408; /* Honey Gold */
+}
+
+:root[data-theme="ember-coral"] {
+  --bg: #5e0000; /* Royal Maroon */
+  --fg: #ff6332; /* Electric Coral */
 }
 
 @theme inline {
@@ -25,6 +68,7 @@
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-space-grotesk);
   --font-deva: var(--font-noto-deva);
+  --font-cartoon: var(--font-cartoon-blocks);
 }
 
 html {

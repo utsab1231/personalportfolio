@@ -1,17 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import NepaliDate from "nepali-date-converter";
 import { person } from "@/content/site";
 
 export function Splash() {
   const [visible, setVisible] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [dates, setDates] = useState<{ bs: string; ad: string } | null>(null);
 
   useEffect(() => {
+    // One-time reads of browser/clock state that isn't known during SSR.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setDates({
+      bs: new NepaliDate().format("DD MMMM YYYY"),
+      ad: new Date().toLocaleDateString("en-US", { day: "2-digit", month: "long", year: "numeric" }),
+    });
+
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (reduceMotion) {
-      // One-time read of a browser media query that isn't known during SSR.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setVisible(false);
       return;
@@ -50,10 +58,16 @@ export function Splash() {
           mounted ? "opacity-0 -translate-y-5" : "opacity-100 translate-y-0"
         }`}
       >
-        <h1 className="text-[12vw] md:text-[8vw] font-display font-medium leading-none text-fg">
+        <h1 className="text-[12vw] md:text-[8vw] font-cartoon font-medium leading-none text-fg">
           {person.name}
         </h1>
-        <p className="font-deva text-sm md:text-base text-muted mt-4">{person.nameDeva}</p>
+        {dates && (
+          <div className="flex items-center justify-center gap-3 text-xs md:text-sm text-muted mt-4">
+            <span>{dates.bs}</span>
+            <span aria-hidden="true">/</span>
+            <span>{dates.ad}</span>
+          </div>
+        )}
       </div>
     </div>
   );

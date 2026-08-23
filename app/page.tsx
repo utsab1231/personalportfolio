@@ -2,7 +2,7 @@ import { Splash } from "@/components/splash";
 import { NameMark } from "@/components/nav/name-mark";
 import { SectionRail } from "@/components/nav/section-rail";
 import { MobileNav } from "@/components/nav/mobile-nav";
-import { ThemeToggle } from "@/components/nav/theme-toggle";
+import { ThemeSwitcher } from "@/components/nav/theme-switcher";
 import { Worm } from "@/components/worm";
 import { Intro } from "@/components/sections/intro";
 import { Experience } from "@/components/sections/experience";
@@ -20,7 +20,7 @@ export default function Home() {
       <NameMark />
       <SectionRail />
       <MobileNav />
-      <ThemeToggle />
+      <ThemeSwitcher />
       <Worm />
       <main className="flex-grow">
         <Intro />

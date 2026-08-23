@@ -8,6 +8,10 @@ export function MobileNav() {
 
   return (
     <>
+      {/* Opaque backdrop behind the fixed mobile header (name mark + this
+          toggle) so scrolled content doesn't show through/overlap them. */}
+      <div className="fixed inset-x-0 top-0 z-40 h-24 bg-bg md:hidden" />
+
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle navigation menu"
