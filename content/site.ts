@@ -186,17 +186,19 @@ export const tryouts = {
   title: "Tryouts",
   titleDeva: "प्रयास",
   // Base names — the optimize-media script generates /public/tryouts/<base>-<width>.<ext>
-  // variants from these. Keep in sync with scripts/optimize-media.mjs → SOURCES.
+  // variants from these. Keep base names in sync with scripts/optimize-media.mjs → SOURCES.
+  // `alt` describes each specific photo — screen reader users hear a different
+  // string per image, not one label repeated nine times.
   images: [
-    "qfneeb",
-    "esfcru",
-    "qd6vlr",
-    "1eu443",
-    "kopfq6",
-    "dyn7r6",
-    "ffs62n",
-    "q3ecss",
-    "y4lijv",
+    { base: "qfneeb", alt: "Four cats curled up together in a patch of afternoon light" },
+    { base: "esfcru", alt: "A terraced Himalayan hillside village seen through drifting cloud" },
+    { base: "qd6vlr", alt: "A snow-covered ridge overlooking a sea of clouds at dusk" },
+    { base: "1eu443", alt: "Jagged snow peaks lit by a low sun above a cloud inversion" },
+    { base: "kopfq6", alt: "A wide snow-covered mountain range rising above a valley of cloud" },
+    { base: "dyn7r6", alt: "A rocky ridge trail with mountains and cloud at sunrise" },
+    { base: "ffs62n", alt: "Sunlight breaking through clouds over a snowy mountain ridge" },
+    { base: "q3ecss", alt: "Two cats, one black-and-white and one grey-and-white, on a sunny porch" },
+    { base: "y4lijv", alt: "Looking straight up through pine branches into a pale sky" },
   ],
   videos: [] as string[],
 };

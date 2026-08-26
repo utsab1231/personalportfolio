@@ -23,7 +23,7 @@ export function SectionRail() {
               >
                 <span className="font-mono text-xs">{item.num}</span>
                 <span>{item.en}</span>
-                <span className="font-deva text-xs">{item.deva}</span>
+                <span lang="ne" className="font-deva text-xs">{item.deva}</span>
               </Link>
             </li>
           );

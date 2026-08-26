@@ -17,7 +17,14 @@ export function Experience() {
                 {entry.role}
               </h3>
               <p className="text-sm text-fg">
-                {entry.dateLabelDeva ? `${entry.dateLabelDeva} · ` : ""}
+                {entry.dateLabelDeva && (
+                  <>
+                    <span lang="ne" className="font-deva">
+                      {entry.dateLabelDeva}
+                    </span>{" "}
+                    ·{" "}
+                  </>
+                )}
                 {entry.dateLabel} · {entry.location}
               </p>
               <div className="space-y-2">

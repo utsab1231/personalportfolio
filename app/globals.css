@@ -17,26 +17,31 @@
 }
 
 /* Funky named themes — each sets only --bg/--fg; --muted and --border are
-   derived automatically via color-mix so we don't hand-pick 12 more values. */
+   derived automatically via color-mix so we don't hand-pick 12 more values.
+   Weights (80%/60% fg) are tuned so every theme's --fg/--muted/--border clear
+   WCAG AA (4.5:1 text, 3:1 non-text) against --bg — verified numerically,
+   not eyeballed. See colors below: two pairs (fire-alarm, ember-coral) were
+   nudged in lightness from their original values for the same reason;
+   lime-volt was nudged slightly too. Hue/character preserved. */
 :root[data-theme="lime-volt"],
 :root[data-theme="fire-alarm"],
 :root[data-theme="velvet-dusk"],
 :root[data-theme="jungle-leaf"],
 :root[data-theme="gold-rush"],
 :root[data-theme="ember-coral"] {
-  --muted: color-mix(in oklch, var(--fg) 55%, var(--bg) 45%);
-  --border: color-mix(in oklch, var(--fg) 20%, var(--bg) 80%);
+  --muted: color-mix(in oklch, var(--fg) 80%, var(--bg) 20%);
+  --border: color-mix(in oklch, var(--fg) 60%, var(--bg) 40%);
   color-scheme: dark;
 }
 
 :root[data-theme="lime-volt"] {
-  --bg: #0245ec; /* Royal Blue */
-  --fg: #d9ff3a; /* Neon Lime */
+  --bg: #0038e0; /* Royal Blue */
+  --fg: #ecff56; /* Neon Lime */
 }
 
 :root[data-theme="fire-alarm"] {
-  --bg: #e62727; /* Fire Red */
-  --fg: #ffde00; /* Electric Yellow */
+  --bg: #ab0000; /* Fire Red */
+  --fg: #ffff4c; /* Electric Yellow */
 }
 
 :root[data-theme="velvet-dusk"] {
@@ -55,8 +60,8 @@
 }
 
 :root[data-theme="ember-coral"] {
-  --bg: #5e0000; /* Royal Maroon */
-  --fg: #ff6332; /* Electric Coral */
+  --bg: #4a0000; /* Royal Maroon */
+  --fg: #ff8e5f; /* Electric Coral */
 }
 
 @theme inline {
