@@ -9,11 +9,11 @@ export function Tryouts() {
     <Section id="tryouts">
       <Heading en="tryouts" deva="प्रयास" />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {tryouts.images.map((base, i) => (
+        {tryouts.images.map(({ base, alt }, i) => (
           <div key={base} className="aspect-[4/5] overflow-hidden">
             <MediaImage
               base={base}
-              alt="Utsab — tryouts"
+              alt={alt}
               priority={i < 2}
               className="w-full h-full object-cover transition-opacity duration-150 hover:opacity-80"
             />

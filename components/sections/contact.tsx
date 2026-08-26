@@ -17,7 +17,7 @@ export function Contact() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-fg" />
           </span>
           <p className="text-sm text-muted">
-            status : {contact.status} / <span className="font-deva">{contact.statusDeva}</span>
+            status : {contact.status} / <span lang="ne" className="font-deva">{contact.statusDeva}</span>
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export function Contact() {
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="text-muted hover:text-fg transition-colors text-sm px-2 py-1"
+              className="text-muted hover:text-fg transition-colors text-sm px-3 py-3"
             >
               {link.label}
             </a>

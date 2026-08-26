@@ -20,7 +20,6 @@ export function Splash() {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (reduceMotion) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVisible(false);
       return;
     }
@@ -58,9 +57,11 @@ export function Splash() {
           mounted ? "opacity-0 -translate-y-5" : "opacity-100 translate-y-0"
         }`}
       >
-        <h1 className="text-[12vw] md:text-[8vw] font-cartoon font-medium leading-none text-fg">
+        {/* Not a heading: the page's one <h1> lives in NameMark, which
+            persists after this splash unmounts. */}
+        <p aria-hidden="true" className="text-[12vw] md:text-[8vw] font-cartoon font-medium leading-none text-fg">
           {person.name}
-        </h1>
+        </p>
         {dates && (
           <div className="flex items-center justify-center gap-3 text-xs md:text-sm text-muted mt-4">
             <span>{dates.bs}</span>

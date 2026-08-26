@@ -30,9 +30,6 @@ export function Projects() {
                 )}
               </div>
               <p className="text-sm text-muted mt-4">{project.description}</p>
-              {!project.link && (
-                <p className="text-sm text-muted mt-2">TODO: add the Chrome Web Store listing URL.</p>
-              )}
               <div className="flex flex-wrap gap-4 mt-6">
                 {project.tags.map((tag, j) => (
                   <span key={j} className="text-sm text-muted">

@@ -40,7 +40,7 @@ export function Intro() {
                 }`}
               >
                 <span>{a.label}</span>
-                <span className="font-deva text-xs">{a.labelDeva}</span>
+                <span lang="ne" className="font-deva text-xs">{a.labelDeva}</span>
               </button>
             ))}
           </div>

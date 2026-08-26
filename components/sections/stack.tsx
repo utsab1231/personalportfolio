@@ -11,7 +11,7 @@ export function Stack() {
           <div key={i} className="grid md:grid-cols-[10rem_1fr] gap-y-2 gap-x-8">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
               {row.label}
-              <span className="block font-deva normal-case tracking-normal text-muted/80 mt-1">
+              <span lang="ne" className="block font-deva normal-case tracking-normal text-muted mt-1">
                 {row.labelDeva}
               </span>
             </p>

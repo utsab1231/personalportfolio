@@ -16,7 +16,10 @@ export function MobileNav() {
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle navigation menu"
         aria-expanded={open}
-        className="fixed top-8 right-4 z-50 md:hidden space-y-2"
+        // Touch target expanded to 44px+ via padding + matching negative margin
+        // (bars' rendered position is unaffected) — grown right/up/down only,
+        // away from the theme switcher's own expanded hit area to its left.
+        className="fixed top-8 right-4 z-50 md:hidden space-y-2 pr-3 pt-3 pb-3 -mr-3 -mt-3 -mb-3"
       >
         <span
           className={`block w-8 h-0.5 bg-fg transition-transform ${
@@ -42,7 +45,7 @@ export function MobileNav() {
                   className="block text-2xl font-display font-medium text-fg"
                 >
                   {item.en}
-                  <span className="block font-deva text-sm text-muted mt-1">{item.deva}</span>
+                  <span lang="ne" className="block font-deva text-sm text-muted mt-1">{item.deva}</span>
                 </a>
               </li>
             ))}

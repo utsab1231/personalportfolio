@@ -31,6 +31,7 @@ export function Worm() {
   return (
     <div
       ref={containerRef}
+      aria-hidden="true"
       className="group fixed top-0 left-0 z-30 hidden h-2 w-2 cursor-default select-none pointer-events-auto md:block"
       style={{ transform: "translate3d(50vw, 50vh, 0)" }}
       onMouseEnter={() => setHovered(true)}
@@ -40,7 +41,7 @@ export function Worm() {
         className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap
                    text-center opacity-0 transition-opacity duration-150 group-hover:opacity-100"
       >
-        <p className="font-deva text-sm leading-tight text-muted">{worm.labelDeva}</p>
+        <p lang="ne" className="font-deva text-sm leading-tight text-muted">{worm.labelDeva}</p>
       </div>
 
       {/* body: rotates to face the direction of travel; segments trail behind the
