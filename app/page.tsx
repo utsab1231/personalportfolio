@@ -3,6 +3,7 @@ import { NameMark } from "@/components/nav/name-mark";
 import { SectionRail } from "@/components/nav/section-rail";
 import { MobileNav } from "@/components/nav/mobile-nav";
 import { ThemeSwitcher } from "@/components/nav/theme-switcher";
+import { PageMascot } from "@/components/nav/page-mascot";
 import { Worm } from "@/components/worm";
 import { Intro } from "@/components/sections/intro";
 import { Experience } from "@/components/sections/experience";
@@ -21,6 +22,7 @@ export default function Home() {
       <SectionRail />
       <MobileNav />
       <ThemeSwitcher />
+      <PageMascot />
       <Worm />
       <main className="flex-grow">
         <Intro />
