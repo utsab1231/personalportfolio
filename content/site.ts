@@ -199,6 +199,7 @@ export const tryouts = {
     { base: "ffs62n", alt: "Sunlight breaking through clouds over a snowy mountain ridge" },
     { base: "q3ecss", alt: "Two cats, one black-and-white and one grey-and-white, on a sunny porch" },
     { base: "y4lijv", alt: "Looking straight up through pine branches into a pale sky" },
+    { base: "zydzu8", alt: "A spider in a web with its prey." },
   ],
   videos: [] as string[],
 };
