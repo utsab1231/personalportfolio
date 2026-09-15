@@ -30,6 +30,7 @@ const SOURCES = [
   "ffs62n",
   "q3ecss",
   "y4lijv",
+  "zydzu8",
 ].map((id) => ({ id, url: `https://files.catbox.moe/${id}.jpg` }));
 
 /** Widths generated for every format — keep in sync with media-image.tsx. */
